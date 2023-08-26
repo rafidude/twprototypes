@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="output.css" />
+    </head>
+    <body class="text-center">
+        <h1 class="text-2xl font-bold text-green-600">
+            Lasa AI Tailwind Experiments
+        </h1>
+
+        <b>Tailwind CSS Layout with Collapsible Menus</b>
+
+        <div class="grid grid-flow-col grid-rows-3 gap-1">
+            <div class="row-span-3 bg-gray-800 p-4">
+                <div id="arrow" class="flex justify-end text-white">Left</div>
+                <nav class="mt-6 text-white">
+                    <ul>
+                        <li
+                            class="flex gap-2 rounded-md py-2 pl-4 hover:bg-gray-700"
+                        >
+                            <span>Home</span>
+                            <span class="hidden md:block">Dashboard</span>
+                        </li>
+                        <li
+                            class="flex gap-2 rounded-md py-2 pl-4 hover:bg-gray-700"
+                        >
+                            <span>Right</span>
+                            <span class="hidden md:block">Expand</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-span-3 bg-blue-400 p-4">ContextBar</div>
+            <div class="col-span-3 row-span-2 bg-red-400 p-4">Content</div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const arrowElement = document.getElementById('arrow')
+
+                arrowElement.addEventListener('click', function () {
+                    alert('You clicked the arrow!')
+                })
+            })
+        </script>
+    </body>
+</html>
